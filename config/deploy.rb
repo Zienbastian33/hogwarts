@@ -4,6 +4,13 @@ lock "~> 3.17.3"
 set :application, "myapp"
 set :repo_url, "git@github.com:zienbastian33/hogwarts.git"
 
+set :user, 'ubuntu'
+set :ssh_options, {
+    forward_agent: true,
+    auth_methods: ['publickey'],
+    keys: ['~/.ssh/rails_aws.pem']
+}
+
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
