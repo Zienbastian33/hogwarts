@@ -2,7 +2,8 @@
 lock "~> 3.17.3"
 
 set :application, "myapp"
-set :repo_url, "git@github.com:zienbastian33/hogwarts.git"
+set :repo_url, "git@github.com:Zienbastian33/hogwarts.git"
+set :branch, 'main'
 
 set :user, 'ubuntu'
 set :ssh_options, {
@@ -18,7 +19,7 @@ set :ssh_options, {
 # set :deploy_to, "/var/www/my_app_name"
 set :deploy_to, "/home/ubuntu/#{fetch :application}"
 
-append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle', 'public/system', 'public/uploads'
+#append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle', 'public/system', 'public/uploads'
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
